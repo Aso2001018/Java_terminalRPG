@@ -3,18 +3,18 @@
 ## バグの修正
 
 ### メタルスライムが必ず逃げてしまうバグ
-'MetalSlime.java line-27'
-'if( r.nextInt(1000) > ESCAPE_RATE){'
+`MetalSlime.java line-27`
+`if( r.nextInt(1000) > ESCAPE_RATE){`
 を
-'if( r.nextInt(1000) < ESCAPE_RATE){'
+`if( r.nextInt(1000) < ESCAPE_RATE){`
 に変更。
 よくあるよね。こういうの。
 
 ### 敵がいないのに攻撃してしまうバグ
 各種モンスタークラスの
-'public void attack'
+`public void attack`
 に対し、プログラム最初に
-'if (!this.isThere()) return;'
+`'if (!this.isThere()) return;`
 を追加。存在しないなら行動しなくていいよ、ってことで、まぁこれでもいいでしょう。
 
 ## RPG課題チャレンジ課題
